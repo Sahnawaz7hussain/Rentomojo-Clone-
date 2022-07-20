@@ -1,0 +1,28 @@
+.navbar_container{
+    display: flex;
+   
+    height: 55px;width: 100%;
+    border: 0px solid black;
+    align-items: center;justify-content: space-between;
+    box-sizing: border-box;padding-left: 90px;padding-right: 90px;
+    overflow: hidden;position:fixed;top:0;
+    background-color: white; margin: auto;
+  }
+  .login-signup{
+    border: 1px solid #DC3226;padding: 10px 12px;background-color: #DC3226;color: white;border-radius: 10px;
+  
+  }
+  .login-signup:hover{
+    cursor: pointer;background-color: white;color: #DC3226;border: 1px solid #DC3226;
+  }
+  input{
+    height:100%;width:95%;border:none
+  }
+  .input-box{
+    display:flex;height:40px; width:550px; border:1px solid black; align-items:center;
+            justify-content:center;
+             padding-right:5px; border-radius:5px
+  }
+  input:focus{
+    outline: none;
+  }
