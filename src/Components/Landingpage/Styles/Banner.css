@@ -1,0 +1,17 @@
+
+.banner-cont{
+    height:450px;width:85%;border: 0px solid red;margin: auto;
+    border-radius: 20px;background-color: #D4E0E0;
+    margin-top: 80px;
+    float: none;
+    margin-bottom: 80px;
+}
+.d-block{
+    border-radius: 20px;
+}
+#banner-bottom{
+    display: flex;align-items: center;justify-content: center;
+    background-color: #D4E0E0;border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;
+    box-sizing: border-box;
+    padding-top: 9px;
+}

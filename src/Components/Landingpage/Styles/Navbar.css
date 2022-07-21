@@ -5,8 +5,12 @@
     border: 0px solid black;
     align-items: center;justify-content: space-between;
     box-sizing: border-box;padding-left: 90px;padding-right: 90px;
-    overflow: hidden;position:fixed;top:0;
-    background-color: white; margin: auto;
+     overflow: hidden;
+    position: fixed;
+    z-index: 100;
+     top:0;
+    background-color: white;
+     /* margin: auto; */
   }
   .login-signup{
     border: 1px solid #DC3226;padding: 10px 12px;background-color: #DC3226;color: white;border-radius: 10px;

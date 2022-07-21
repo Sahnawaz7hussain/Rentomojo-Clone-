@@ -1,0 +1,15 @@
+
+.second-menu{
+    height: 500px;width: 85%;border: 0px solid black;margin: auto;
+    display: grid;grid-template-columns: repeat(3,1fr);gap: 15px;
+
+}
+.second-menu>div{
+    height: auto;
+    width:auto;border: 0px solid blue;
+     box-sizing: border-box;padding-top: 15px;
+    padding-right: 15px
+}
+.second-menu>div>img{
+    width:13%;margin-bottom: 20px;
+}
