@@ -1,4 +1,4 @@
-
+import {useNavigate} from "react-router-dom"
 import React from "react";
 import { useState } from "react";
 import "./Styles/Menu.css"
@@ -24,12 +24,16 @@ import "./Styles/Menu.css"
  ]
 function Menu(){
     const [data] = useState(Items)
+    const navigate = useNavigate()
+    const handleNavigate =()=>{
+        navigate("/products")
+    }
     return(
         <div class="menu" style={{width:"85%"}} >
              {
                 data.map((el)=>(
-                    <div>
-                        <img src={el.avatar} alt="" />
+                    <div onClick={handleNavigate} >
+                        <img src={el.avatar} alt={el.title} />
                         <p>{el.title}</p>
                     </div>
                 ))
