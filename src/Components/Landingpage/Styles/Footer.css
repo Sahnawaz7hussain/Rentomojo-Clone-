@@ -1,0 +1,13 @@
+.footer_container{
+    height: auto;width: auto;border: 0px solid black;
+    box-sizing: border-box;
+    padding-top: 80px;padding-left: 80px;padding-right: 80px;
+    margin-bottom: 15px;
+    /* background-color:  */
+    background-color: whitesmoke;
+  }
+  .footer_container>h5,.footer_container>div>div>p{
+    color:#717171;font-weight: 400;
+  font-size: 14px;
+  }
+  
