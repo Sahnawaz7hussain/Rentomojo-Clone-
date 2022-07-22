@@ -1,6 +1,7 @@
 import React, {useState } from "react";
  import Slider from "react-slick";
  import "./Styles/ProductOverview.css"
+ import {useNavigate} from "react-router-dom"
  const products=[
     {
     avatar:"https://p.rmjo.in/moodShot/kgk2znv0-1024x512.jpg",
@@ -191,6 +192,12 @@ function ProductsOverview(){
           }
         ]
       };
+      const navigate = useNavigate()
+      const handleNavigate =()=>{
+        navigate("/products")
+      }
+
+
     return(
        <div className="product-overview-container">
         <div className="upperparagraph">
@@ -209,7 +216,7 @@ function ProductsOverview(){
 
                       <p className="rent-price">₹ {el.rent}/month</p>
                         </div>
-                    <button>See More</button>
+                    <button onClick={handleNavigate} >See More</button>
 
                     </div>
                 </div>

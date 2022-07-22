@@ -1,13 +1,17 @@
 import "./Styles/Navbar.css"
-
+import {useNavigate} from "react-router-dom"
 export default function Navbar(){
+    const navigate = useNavigate()
+    const handleNavigate = ()=>{
+        navigate("/")
+    }
     return (
         <div>
         <div className="navbar_container" >
             {/* logo */}
             <div style={{display:"flex",gap:"10px"}} >
-            <img src="https://www.rentomojo.com/public/images/Home/new/logo.svg" alt="" />
-             <h2>rentomojo</h2>
+            <img onClick={handleNavigate}  src="https://www.rentomojo.com/public/images/Home/new/logo.svg" alt="" />
+             <h2 onClick={handleNavigate} >rentomojo</h2>
             </div>
             <p>Find City </p>
             <div className="input-box">
