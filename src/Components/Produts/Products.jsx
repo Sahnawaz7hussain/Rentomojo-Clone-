@@ -1,5 +1,7 @@
-import React,{useState} from "react"
+import axios from "axios";
+import React,{useState,useEffect} from "react"
 import "./ProductStyle/Products.css"
+/*
 const products=[
     {
     avatar:"https://p.rmjo.in/moodShot/kgk2znv0-1024x512.jpg",
@@ -132,17 +134,35 @@ const products=[
     rent:659
     }
 ]
+*/
 function Products(){
-     const [data] = useState(products)
-     console.warn(data)
+     //const [data] = useState(products)
+     const [loading ,setLoading] = useState(false);
+     const [posts,setPosts] = useState([])
+     useEffect(()=>{
+       const loadProducts = async() =>{
+          setLoading(true)
+          
+          const response = await axios.get("https://fake-json-server-api-sahnawaz.herokuapp.com/products")
+          setPosts(response.data)
+          setLoading(false)
+
+       }
+
+loadProducts()
+
+     },[])
+     console.log(posts)
     return(
         <div className="product-main-container">
 
         
-          <h2>Products ({data.length}+)</h2>
+           <h2>Products ({posts.length}+)</h2>
+     {
+      loading? <h3 style={{textAlign:"center"}} >Loading products...</h3>:
         <div className="products-container">
-          {
-            data.map(({avatar,title,rent})=>(
+           {
+            posts.map(({avatar,title,rent})=>(
                 <div className="product-card">
                     <img src={avatar} alt={title} />
                     <h3>{title}</h3>
@@ -150,8 +170,9 @@ function Products(){
                     <p>₹ {rent}/mo</p>
                 </div>
             ))
-          }
+          } 
         </div>
+      }
         </div>
     )
 }
